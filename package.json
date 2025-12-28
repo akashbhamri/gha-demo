@@ -1,9 +1,6 @@
-{
-  "name": "gha-demo",
-  "version": "1.0.0",
-  "scripts": {
-    "build": "echo Build successful",
-    "test": "echo Tests passed"
-  }
+"scripts": {
+  "start": "node server.js",
+  "build": "echo Build successful",
+  "test": "echo Tests passed"
 }
 
