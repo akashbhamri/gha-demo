@@ -30,9 +30,17 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
-    needs: build 
+    needs: build
+    environment: production
+
+    env:
+      APP_ENV: production 
     steps:
      - uses: actions/checkout@v4
+     
+     - name: Show environment variable
+       run: echo "APP_ENV is $APP_ENV"
+
      - name: 'Deploy to Azure Web App'
        uses: azure/webapps-deploy@v3
        with:
