@@ -1,0 +1,15 @@
+name: CI demo
+
+on:
+  push: 
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+  
+
+    steps:
+     - uses: actions/checkout@04
+     - name: Say hello
+       run: echo "Hello from github  Action"
