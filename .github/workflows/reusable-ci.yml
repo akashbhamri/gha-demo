@@ -1,0 +1,23 @@
+name: Reusable CI
+
+on:
+ workflow_call:
+   inputs:
+     environment:
+       required: true
+       type: string
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+     - name: Checkout repository
+       uses: actions/checkout@v4
+
+     - name: Run a sample command
+       run: echo "reusable Ci is running"
+    
+     - name: Print current directory
+       run: pwd

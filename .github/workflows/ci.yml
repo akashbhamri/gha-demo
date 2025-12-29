@@ -1,14 +1,14 @@
-name: CI Demo
+name: CI
 
 on:
   push:
-    branches: [main]
-
+    branches: [ "main" ]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  call-reusable-ci:
+    uses: ./.github/worflows/reusable-ci.yml
     
+<<<<<<< HEAD
     steps:
      - name: Setup repository
        uses: ./.github/actions/setup-repo
@@ -50,3 +50,5 @@ jobs:
          package: '.'
 
 
+=======
+>>>>>>> 05b380b (Introduce reusable CI worflow)
