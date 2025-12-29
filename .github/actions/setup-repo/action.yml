@@ -1,0 +1,8 @@
+name: "Setup repository"
+description: "Prepare the repository for CI jobs"
+
+runs:
+  using: "composite"
+  steps:
+   - name: checkout code
+     uses: actions/checkout@v4
